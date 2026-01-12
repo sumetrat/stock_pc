@@ -12,13 +12,12 @@
         .status { font-size: 1.5em; color: #7f8c8d; }
         .alert { color: #c0392b; font-weight: bold; animation: pulse 1s infinite; }
         @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.5; } 100% { opacity: 1; } }
-        .btn { display: inline-block; padding: 10px 20px; background: #bdc3c7; color: #333; text-decoration: none; border-radius: 5px; margin-top:20px; font-weight: bold;}
+        .btn { display: inline-block; padding: 10px 20px; background: #bdc3c7; color: #333; text-decoration: none; border-radius: 5px; margin-top:20px; font-weight: bold; border: none; cursor: pointer;}
         .scanner-icon { font-size: 80px; margin: 20px 0; }
         .btn-reset { background-color: #ecf0f1; color: #2c3e50; margin-right: 10px; }
         
-        /* --- สไตล์รูปภาพสินค้า (ส่วนที่เพิ่มมา) --- */
         .product-img {
-            max-width: 300px;  /* จำกัดขนาดรูปไม่ให้ใหญ่เกิน */
+            max-width: 300px;
             max-height: 300px;
             border-radius: 10px;
             margin: 20px auto;
@@ -58,7 +57,10 @@
         
         <br>
         <a href="/reset" class="btn btn-reset">🔄 รีเซ็ตหน้าจอ</a>
-        <a href="/admin" class="btn">⚙️ จัดการสินค้า (Admin)</a>
+        
+        <a href="/dashboard" class="btn" style="background-color: #3498db; color: white;">📊 ดู Dashboard</a>
+        
+        <a href="/admin" class="btn">⚙️ จัดการสินค้า</a>
     </div>
 
     <script>

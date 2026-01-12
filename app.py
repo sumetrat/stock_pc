@@ -39,7 +39,7 @@ if not os.path.exists(IMAGE_FOLDER):
     os.makedirs(IMAGE_FOLDER)
 
 # ==========================================
-# 3. HTML สำหรับหน้า Admin (แก้ CSS ให้ปุ่มเรียงสวย)
+# 3. HTML สำหรับหน้า Admin (ฝังไว้ในนี้)
 # ==========================================
 html_admin = """
 <!DOCTYPE html>
@@ -224,6 +224,11 @@ def delete(code):
         except:
             pass
     return redirect('/admin')
+
+# --- เพิ่มส่วน Dashboard (Route ใหม่) ---
+@app.route('/dashboard')
+def dashboard():
+    return render_template('dashboard.html', data=inventory)
 
 if __name__ == '__main__':
     webbrowser.open('http://localhost:5000')
